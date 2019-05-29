@@ -1,6 +1,8 @@
 ---
-layout: post
-author: Joi
+layout: single
+title:  "Linked List (this is for test)"
+date:   2019-05-28 21:27:56 -0700
+categories: jekyll test
 ---
 ## Linked List (this is for test)
 
