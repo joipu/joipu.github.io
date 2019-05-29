@@ -10,8 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                    : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes@4.16.4"
+# theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -19,9 +19,9 @@ locale                   : "en-US"
 title                    : "Thought Archive"
 title_separator          : "-"
 name                     : "Joi Pu"
-description              : "This is a place where I put my thoughts and notes"
+description              : "This is where I put my thoughts and notes."
 url                      : "https://joipu.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/minimal-mistakes" # the subpath of your site, e.g. "/blog"
+baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "joipu/joipu.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -95,9 +95,6 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - "https://github.com/joipu"
-    - "https://twitter.com/joipu"
-    - "https://www.linkedin.com/in/joi-qiuyi-pu-8aaa5917/"
 
 # Analytics
 analytics:
@@ -110,22 +107,22 @@ analytics:
 # Site Author
 author:
   name             : "Joi Pu"
-  avatar           : "/assets/images/avatar.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : # "I am an amazing person."
+  avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "This is where I put my thoughts and notes."
   location         : "San Francisco, CA"
-  email            :
+  email            : # "qpu8@gatech.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:qpu8@gatech.edu
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://joipu.github.io"
+      url: "https://https:/joipu.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/joipu"
-    # - label: "Facebook"
-      # icon: "fab fa-fw fa-facebook-square"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -146,11 +143,11 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/joipu"
-    # - label: "GitLab"
-      # icon: "fab fa-fw fa-gitlab"
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
       # url:
-    # - label: "Bitbucket"
-      # icon: "fab fa-fw fa-bitbucket"
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
@@ -257,22 +254,22 @@ whitelist:
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
@@ -296,3 +293,12 @@ defaults:
       comments: # true
       share: true
       related: true
+      sidebar:
+        nav: "docs"
+# _pages
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      author_profile: true

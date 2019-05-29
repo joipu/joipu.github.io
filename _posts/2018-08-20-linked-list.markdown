@@ -2,10 +2,9 @@
 layout: single
 title:  "Linked List (this is for test)"
 date:   2019-05-28 21:27:56 -0700
-categories: jekyll test
+categories: jekyll-test
+classes: wide
 ---
-## Linked List (this is for test)
-
 1. Linked List vs Array
 + 都属于linear array
 + Linked list's 优点

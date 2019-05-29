@@ -1,0 +1,21 @@
+# main links
+main:
+  - title: "posts"
+    url: /
+  - title: "categories"
+    url: /categories/
+  - title: "tags"
+    url: /tags/
+  - title: "about"
+    url: 
+
+
+docs:
+  - title: Navigation
+    children:
+      - title: "Posts"
+        url: /
+      - title: "Categories"
+        url: /categories/
+      - title: "Tags"
+        url: "tags"
