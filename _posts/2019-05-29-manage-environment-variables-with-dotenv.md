@@ -98,6 +98,6 @@ If the app is hosted remotely: define all the environment variables everywhere w
 
 DONE!
 
-## Reference
+## References
 1. [Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars)
 2. [dotenv Setup](https://github.com/motdotla/dotenv)
