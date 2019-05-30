@@ -117,19 +117,19 @@ author:
       url: mailto:qpu8@gatech.edu
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://joipu.github.io"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/joipu"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://joipu.github.io"   
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/joipu"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/joiqpu/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/joipu"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
 
 # Site Footer
 footer:
