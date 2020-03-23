@@ -158,3 +158,8 @@ This version allows us to change the height to be whatever we want without affec
 The IoC container is the framework that is used to achieve automatic dependency injection. From the updated House example above, we can easily see that in order to build a house, we actually need to do multiple create to instantiate the relevant objects. This could lead to a lot of duplicate work which could be resolved by the IoC Container. The container automatically initialize all these relevant objects and wrap them up. With its help, we don't have to manually initialize these objects or try to go over all the relevant contructors and see what's happening under the hood when we want to create a House object. The IoC container helps us do that. 
 
 Examples of the IoC container include Google Guice, Spring IoC, and StructureMap. There are many resources and documentations online that introduce how to use these tools. I may or may not write another post to further talk about the IoC container or any of these tools, or maybe add more thoughts about inversion of controler/dependency injection in general. But as for now, I will stop here.
+
+## Relevant Resources
+1. Design Patterns Explained - Dependency Injection with Code Examples: https://stackify.com/dependency-injection/
+2. Inversion of Control: https://en.wikipedia.org/wiki/Inversion_of_control
+3. Coupling in Java: https://www.geeksforgeeks.org/coupling-in-java/
