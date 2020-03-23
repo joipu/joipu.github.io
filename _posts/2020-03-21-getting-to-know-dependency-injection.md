@@ -21,7 +21,8 @@ Dependency injection is a common technique used for making class independent of 
 
 Suppose if we want to design a house, we may want to create a Door class, a Skeleton class, and a House class. Conventionally, we could briefly write these classes with their relationships as below:
 
-```Door class:
+Door class:
+```
 public class Door {
 	private int height;
 
@@ -31,7 +32,8 @@ public class Door {
 }
 ```	
 
-```Skeleton class:
+Skeleton class:
+```
 public class Skeleton {
 	private Door door;
 
@@ -41,7 +43,8 @@ public class Skeleton {
 }
 ```	
 
-```House class:
+House class:
+```
 public class House {
 	private Skeleton skeleton;
 
@@ -63,7 +66,8 @@ house.build();
 
 The House class has a hard dependency on the Skeleton class which has a hard dependency on the Door class. By saying A class has a hard dependency on B class, it means the module A cannot function without B. It looks fine though at this moment, until if we want to add more variables or simply change the status to the class which other classes depend. For example, if we want to make the height in Door class changeable, we may change the code to this:
 
-```Door class:
+Door class:
+```
 public class Door {
 	private int height;
 
@@ -75,7 +79,8 @@ public class Door {
 
 Accordingly, the other classes should also be changed:
 
-```Skeleton class:
+Skeleton class:
+```
 public class Skeleton {
 	private Door door;
 
@@ -85,7 +90,8 @@ public class Skeleton {
 }
 ```	
 
-```House class:
+House class:
+```
 public class House {
 	private Skeleton skeleton;
 
@@ -150,6 +156,6 @@ This version allows us to change the height to be whatever we want without affec
 
 
 ## What is IoC Container?
-The IoC container is the framework that is used to achieve automatic dependency injection. From the updated House example above, we can easily see that, in order to build a house, we actually need to do multiple create to instantiate the relevant objects. This could lead to a lot of duplicate work which could be resolved by the IoC Container. The container automatically initialize all these relevant objects and wrap them up. With its help, we don't have to manually initialize these objects or try to go over all the relevant contructors and see what's happening under the hood when we want to create a House object. The IoC container helps us do that. 
+The IoC container is the framework that is used to achieve automatic dependency injection. From the updated House example above, we can easily see that in order to build a house, we actually need to do multiple create to instantiate the relevant objects. This could lead to a lot of duplicate work which could be resolved by the IoC Container. The container automatically initialize all these relevant objects and wrap them up. With its help, we don't have to manually initialize these objects or try to go over all the relevant contructors and see what's happening under the hood when we want to create a House object. The IoC container helps us do that. 
 
 Examples of the IoC container include Google Guice, Spring IoC, and StructureMap. There are many resources and documentations online that introduce how to use these tools. I may or may not write another post to further talk about the IoC container or any of these tools, or maybe add more thoughts about inversion of controler/dependency injection in general. But as for now, I will stop here.
