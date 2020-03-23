@@ -149,7 +149,6 @@ Skeleton skeleton = new Skeleton(door);
 House house = new House(skeleton);
 
 house.build();
-
 ```
 
 This version allows us to change the height to be whatever we want without affecting other dependent classes, like Skeleton or House. The way we pass the skeleton into the constructor in House is called Dependency Injection, specifically constructor injection. Instead of initializing the dependency in the class contructor (e.g. public House() { this.skeleton = new Skeleton(); }), we inject the dependency (e.g. public House(Skeleton skeleton) { this.skeleton = skeleton; }. This way we can avoid changing the signature of dependendable classes when a class's signature gets changed as the dependendable class's contructor (House) does not directly depend on the other class (Skeleton). It follows the design pattern Inversion of Control and removes the hard dependencies between classes, which makes the code more maintainable.
