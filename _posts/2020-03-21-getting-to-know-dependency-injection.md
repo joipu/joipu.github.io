@@ -22,7 +22,7 @@ Dependency injection is a common technique used for making class independent of 
 Suppose if we want to design a house, we may want to create a Door class, a Skeleton class, and a House class. Conventionally, we could briefly write these classes with their relationships as below:
 
 Door class:
-```
+```java
 public class Door {
 	private int height;
 
@@ -33,7 +33,7 @@ public class Door {
 ```	
 
 Skeleton class:
-```
+```java
 public class Skeleton {
 	private Door door;
 
@@ -44,7 +44,7 @@ public class Skeleton {
 ```	
 
 House class:
-```
+```java
 public class House {
 	private Skeleton skeleton;
 
@@ -59,7 +59,7 @@ public class House {
 ```	
 
 With these classes, we can create a house by simply calling:
-```
+```java
 House house = new House();
 house.build();
 ```
@@ -67,7 +67,7 @@ house.build();
 The House class has a hard dependency on the Skeleton class which has a hard dependency on the Door class. By saying A class has a hard dependency on B class, it means the module A cannot function without B. It looks fine though at this moment, until if we want to add more variables or simply change the status to the class which other classes depend. For example, if we want to make the height in Door class changeable, we may change the code to this:
 
 Door class:
-```
+```java
 public class Door {
 	private int height;
 
@@ -80,7 +80,7 @@ public class Door {
 Accordingly, the other classes should also be changed:
 
 Skeleton class:
-```
+```java
 public class Skeleton {
 	private Door door;
 
@@ -91,7 +91,7 @@ public class Skeleton {
 ```	
 
 House class:
-```
+```java
 public class House {
 	private Skeleton skeleton;
 
@@ -108,7 +108,7 @@ public class House {
 We can see that the change in the Door class leads to a whole bunch of necessary changes in other dependendable classes, which would make the code difficult to maintain if this type of cases happens in a large codebase. What we could potentially do to avoid the issue, is instead of doing this traditional control flow allowing top classes to be dependent on lower classes, we invert the control flow to do backwards. See the change in example below:
 
 First create a Door class and add the instance vairable height:
-```
+```java
 public class Door {
 	private int height;
 
@@ -119,7 +119,7 @@ public class Door {
 ```
 
 Then we create the Skeleton class and the House class as following:
-```
+```java
 public class Skeleton {
 	private Door door;
 
@@ -131,7 +131,7 @@ public class Skeleton {
 
 ```
 
-```
+```java
 public class House {
 	private Skeleton skeleton;
 
@@ -143,7 +143,7 @@ public class House {
 ```
 
 With the code changed as above, we can create our house by calling:
-```
+```java
 Door door = new Door(8); // suppose the door has a height of 8 feet
 Skeleton skeleton = new Skeleton(door);
 House house = new House(skeleton);
